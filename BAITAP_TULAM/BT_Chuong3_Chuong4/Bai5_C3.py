@@ -1,3 +1,15 @@
+'''def Tim_Vitri_k(L,k):
+    try:
+        return L.index(k)
+    except ValueError:
+        return -1
+print(Tim_Vitri_k([1,4,6,8,9,4],4))'''
+'''def Tim_Vitri_k(L,k):
+    for i in range(len(L)):
+        if L[i] == k:
+            return i
+        return -1
+print(Tim_Vitri_k([2,7,4,2,1,3,6], 2))'''
 def tim_vi_tri_k(lst, k):
     try:
         return lst.index(k)+1

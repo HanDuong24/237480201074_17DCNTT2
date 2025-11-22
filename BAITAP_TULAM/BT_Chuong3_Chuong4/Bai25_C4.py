@@ -1,7 +1,7 @@
 L = []
 while True:
     try:
-        n = int(input("hập số lượng phần tử: "))
+        n = int(input("Nhập số lượng phần tử: "))
         break
     except ValueError:
         print("Nhập số bất kỳ!")
@@ -15,17 +15,16 @@ for i in range(n):
         except ValueError:
             print("Nhập số nguyên hợp lệ!")
 
-chan = []
-khong = []
-le = []
+co_chan = False
+co_le = False
 
 for x in L:
-    if x == 0:
-        khong.append(x)
-    elif x % 2 == 0:
-        chan.append(x)
+    if x % 2 == 0:
+        co_chan = True
     else:
-        le.append(x)
+        co_le = True
 
-ket_qua = chan + khong + le
-print("List sau khi sắp xếp:", ket_qua)
+if co_chan and co_le:
+    print("True – Đây là list chẵn lẻ")
+else:
+    print("False – Đây không phải list chẵn lẻ")
